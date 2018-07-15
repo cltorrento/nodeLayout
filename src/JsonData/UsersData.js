@@ -1,0 +1,30 @@
+const usersData = [
+  {id: 0, name: 'Carlos Luis Torrento', registered: '03/08/1978', role: 'Alien', status: 'Don\'t panic!', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 1, name: 'Samppa Nori', registered: '2018/01/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 2, name: 'Estavan Lykos', registered: '2018/02/01', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 3, name: 'Chetan Mohamed', registered: '2018/02/01', role: 'Admin', status: 'Inactivo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 4, name: 'Derick Maximinus', registered: '2018/03/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 5, name: 'Friderik Dávid', registered: '2018/01/21', role: 'Staff', status: 'Inactivo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 6, name: 'Yiorgos Avraamu', registered: '2018/01/01', role: 'Member', status: 'Inactivo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 7, name: 'Avram Tarasios', registered: '2018/02/01', role: 'Staff', status: 'Inactivo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 8, name: 'Quintin Ed', registered: '2018/02/01', role: 'Admin', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 9, name: 'Enéas Kwadwo', registered: '2018/03/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 10, name: 'Agapetus Tadeáš', registered: '2018/01/21', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 11, name: 'Carwyn Fachtna', registered: '2018/01/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 12, name: 'Nehemiah Tatius', registered: '2018/02/01', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 13, name: 'Ebbe Gemariah', registered: '2018/02/01', role: 'Admin', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 14, name: 'Eustorgios Amulius', registered: '2018/03/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 15, name: 'Leopold Gáspár', registered: '2018/01/21', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 16, name: 'Pompeius René', registered: '2018/01/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 17, name: 'Paĉjo Jadon', registered: '2018/02/01', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 18, name: 'Micheal Mercurius', registered: '2018/02/01', role: 'Admin', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 19, name: 'Ganesha Dubhghall', registered: '2018/03/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 20, name: 'Hiroto Šimun', registered: '2018/01/21', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 21, name: 'Vishnu Serghei', registered: '2018/01/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 22, name: 'Zbyněk Phoibos', registered: '2018/02/01', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 23, name: 'Einar Randall', registered: '2018/02/01', role: 'Admin', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 24, name: 'Félix Troels', registered: '2018/03/21', role: 'Staff', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'},
+  {id: 25, name: 'Aulus Agmundr', registered: '2018/01/01', role: 'Member', status: 'Activo', usuario: 'Admin', email: 'cltorrento@gmail.com', password: 'reactmodeon'}
+]
+
+export default usersData

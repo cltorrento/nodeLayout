@@ -1,4 +1,5 @@
 import {
+  Developers,
   Breadcrumbs,
   Cards,
   Carousels,
@@ -63,7 +64,7 @@ export {
   Collapses,
   Carousels,
   Cards,
+  Developers,
   Breadcrumbs,
   Paginations,
 };
-

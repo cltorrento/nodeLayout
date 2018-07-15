@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
+import { Badge, Card, CardBody, CardHeader, Col, Row, Table, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-import usersData from './UsersData'
+import usersData from '../../JsonData/UsersData' 
 
 function UserRow(props) {
   const user = props.user
   const userLink = `#/users/${user.id}`
 
   const getBadge = (status) => {
-    return status === 'Active' ? 'success' :
-      status === 'Inactive' ? 'secondary' :
+    return status === 'Activo' ? 'success' :
+      status === 'Inactivo' ? 'secondary' :
         status === 'Pending' ? 'warning' :
           status === 'Banned' ? 'danger' :
             'primary'
@@ -30,25 +30,25 @@ class Users extends Component {
 
   render() {
 
-    const userList = usersData.filter((user) => user.id < 10)
+    const userList = usersData.filter((user) => user.id < 7)
 
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xl={6}>
+          <Col xl={12}>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i> Users <small className="text-muted">example</small>
+                <i className="fa fa-align-justify"></i> Usuarios
               </CardHeader>
               <CardBody>
                 <Table responsive hover>
                   <thead>
                     <tr>
-                      <th scope="col">id</th>
-                      <th scope="col">name</th>
-                      <th scope="col">registered</th>
-                      <th scope="col">role</th>
-                      <th scope="col">status</th>
+                      <th scope="col">Id</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Creado</th>
+                      <th scope="col">Role</th>
+                      <th scope="col">Status</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -57,6 +57,16 @@ class Users extends Component {
                     )}
                   </tbody>
                 </Table>
+                <Pagination>
+                  <PaginationItem disabled><PaginationLink previous tag="button">Prev</PaginationLink></PaginationItem>
+                  <PaginationItem active>
+                    <PaginationLink tag="button">1</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem><PaginationLink tag="button">2</PaginationLink></PaginationItem>
+                  <PaginationItem><PaginationLink tag="button">3</PaginationLink></PaginationItem>
+                  <PaginationItem><PaginationLink tag="button">4</PaginationLink></PaginationItem>
+                  <PaginationItem><PaginationLink next tag="button">Next</PaginationLink></PaginationItem>
+                </Pagination>
               </CardBody>
             </Card>
           </Col>

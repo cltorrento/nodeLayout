@@ -7,6 +7,11 @@ function Loading() {
   return <div>Loading...</div>;
 }
 
+const Developers = Loadable({
+  loader: () => import('./views/Base/Developers'),
+  loading: Loading,
+});
+
 const Breadcrumbs = Loadable({
   loader: () => import('./views/Base/Breadcrumbs'),
   loading: Loading,
@@ -92,80 +97,11 @@ const Tooltips = Loadable({
   loading: Loading,
 });
 
-const BrandButtons = Loadable({
-  loader: () => import('./views/Buttons/BrandButtons'),
-  loading: Loading,
-});
-
-const ButtonDropdowns = Loadable({
-  loader: () => import('./views/Buttons/ButtonDropdowns'),
-  loading: Loading,
-});
-
-const ButtonGroups = Loadable({
-  loader: () => import('./views/Buttons/ButtonGroups'),
-  loading: Loading,
-});
-
-const Buttons = Loadable({
-  loader: () => import('./views/Buttons/Buttons'),
-  loading: Loading,
-});
-
-const Charts = Loadable({
-  loader: () => import('./views/Charts'),
-  loading: Loading,
-});
-
 const Dashboard = Loadable({
   loader: () => import('./views/Dashboard'),
   loading: Loading,
 });
 
-const CoreUIIcons = Loadable({
-  loader: () => import('./views/Icons/CoreUIIcons'),
-  loading: Loading,
-});
-
-const Flags = Loadable({
-  loader: () => import('./views/Icons/Flags'),
-  loading: Loading,
-});
-
-const FontAwesome = Loadable({
-  loader: () => import('./views/Icons/FontAwesome'),
-  loading: Loading,
-});
-
-const SimpleLineIcons = Loadable({
-  loader: () => import('./views/Icons/SimpleLineIcons'),
-  loading: Loading,
-});
-
-const Alerts = Loadable({
-  loader: () => import('./views/Notifications/Alerts'),
-  loading: Loading,
-});
-
-const Badges = Loadable({
-  loader: () => import('./views/Notifications/Badges'),
-  loading: Loading,
-});
-
-const Modals = Loadable({
-  loader: () => import('./views/Notifications/Modals'),
-  loading: Loading,
-});
-
-const Colors = Loadable({
-  loader: () => import('./views/Theme/Colors'),
-  loading: Loading,
-});
-
-const Typography = Loadable({
-  loader: () => import('./views/Theme/Typography'),
-  loading: Loading,
-});
 
 const Widgets = Loadable({
   loader: () => import('./views/Widgets/Widgets'),
@@ -187,10 +123,11 @@ const User = Loadable({
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
+  { path: '/base/developers', name: 'Developers', component: Developers },
+  { path: '/users', exact: true,  name: 'Usuarios', component: Users },
+  { path: '/users/:id', exact: true, name: 'Informacion de Usuarios', component: User },
+
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
-  { path: '/theme', exact: true, name: 'Theme', component: Colors },
-  { path: '/theme/colors', name: 'Colors', component: Colors },
-  { path: '/theme/typography', name: 'Typography', component: Typography },
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
   { path: '/base/forms', name: 'Forms', component: Forms },
@@ -209,24 +146,7 @@ const routes = [
   { path: '/base/popovers', name: 'Popovers', component: Popovers },
   { path: '/base/progress-bar', name: 'Progress Bar', component: ProgressBar },
   { path: '/base/tooltips', name: 'Tooltips', component: Tooltips },
-  { path: '/buttons', exact: true, name: 'Buttons', component: Buttons },
-  { path: '/buttons/buttons', name: 'Buttons', component: Buttons },
-  { path: '/buttons/button-dropdowns', name: 'Button Dropdowns', component: ButtonDropdowns },
-  { path: '/buttons/button-groups', name: 'Button Groups', component: ButtonGroups },
-  { path: '/buttons/brand-buttons', name: 'Brand Buttons', component: BrandButtons },
-  { path: '/icons', exact: true, name: 'Icons', component: CoreUIIcons },
-  { path: '/icons/coreui-icons', name: 'CoreUI Icons', component: CoreUIIcons },
-  { path: '/icons/flags', name: 'Flags', component: Flags },
-  { path: '/icons/font-awesome', name: 'Font Awesome', component: FontAwesome },
-  { path: '/icons/simple-line-icons', name: 'Simple Line Icons', component: SimpleLineIcons },
-  { path: '/notifications', exact: true, name: 'Notifications', component: Alerts },
-  { path: '/notifications/alerts', name: 'Alerts', component: Alerts },
-  { path: '/notifications/badges', name: 'Badges', component: Badges },
-  { path: '/notifications/modals', name: 'Modals', component: Modals },
   { path: '/widgets', name: 'Widgets', component: Widgets },
-  { path: '/charts', name: 'Charts', component: Charts },
-  { path: '/users', exact: true,  name: 'Users', component: Users },
-  { path: '/users/:id', exact: true, name: 'User Details', component: User },
 ];
 
 export default routes;
